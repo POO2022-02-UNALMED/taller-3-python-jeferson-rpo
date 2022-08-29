@@ -1,14 +1,17 @@
-from televisores.control import Control
-from televisores.marca import Marca
+from asyncio.windows_events import NULL
+
+
 class TV:
     numTV = 0
+   
     def __init__(self,marca,estado) :
-        self.marca = Marca
+        control = 0
+        self.marca = marca
         self.canal = 1
         self.precio = 500
         self.estado = estado
         self.volumen = 1
-        self.control = Control
+        self.control = control
         self.numTV += 1
     
     def turnOn (self):
