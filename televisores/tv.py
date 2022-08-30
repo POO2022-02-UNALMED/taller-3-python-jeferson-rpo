@@ -38,10 +38,10 @@ class TV:
     def getEstado (self):
         return self.estado
     @classmethod    
-    def getNumTv (cls):
+    def getNumTV (cls):
         return cls.numTV
     @classmethod 
-    def setNumTv (cls, Num):
+    def setNumTV (cls, Num):
         cls.numTV = Num
 
     def getMarca (self):
