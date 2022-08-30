@@ -1,18 +1,15 @@
-from asyncio.windows_events import NULL
-
 
 class TV:
     numTV = 0
    
     def __init__(self,marca,estado) :
-        control = 0
         self.marca = marca
         self.canal = 1
         self.precio = 500
         self.estado = estado
         self.volumen = 1
-        self.control = control
-        self.numTV += 1
+        self.control = None
+        TV.numTV += 1
     
     def turnOn (self):
         self.estado = True
@@ -40,6 +37,12 @@ class TV:
         
     def getEstado (self):
         return self.estado
+    @classmethod    
+    def getNumTv (cls):
+        return cls.numTV
+    @classmethod 
+    def setNumTv (cls, Num):
+        cls.numTV = Num
 
     def getMarca (self):
         return self.marca
